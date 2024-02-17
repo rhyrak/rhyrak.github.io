@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="timetable.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="file-in">
+      CSV columns: course_code,day,slot_offset,duration,classrooms </label
+    ><button id="load-ex">Load Example</button><br />
+    <input type="file" accept=".csv;.txt" id="file-in" />
+    <label for="slot-duration">Timeslot duration (WIP): </label>
+    <select id="slot-duration">
+      <option>15</option>
+    </select>
+    <div class="tt-container">
+      <div id="tt"></div>
+      <div id="tt-controls"></div>
+    </div>
+    <script type="module" src="timetable.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

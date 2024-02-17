@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 1024px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.tt-container {
+    display: flex;
+    max-height: 90vh;
+}
+
+@media only screen and (max-width: 1124px) {
+    .tt-container {
+        flex-wrap: wrap;
+    }
+}
+
+#tt-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    overflow-y: auto;
+}
