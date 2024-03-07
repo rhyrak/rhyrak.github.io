@@ -1,0 +1,24 @@
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 98%;
+    text-align: center;
+    margin: auto;
+}
+
+tbody > tr {
+    background-color: #eaf1dd;
+}
+tbody > tr:nth-child(n + 10) {
+    background-color: #e5dfec;
+}
+tbody > tr:nth-child(n + 19) {
+    background-color: #fde9d9;
+}
+
+tbody > tr:nth-child(n + 28) {
+    background-color: #dbe5f1;
+}
+tbody > tr:nth-child(n + 37) {
+    background-color: #f2dbdb;
+}

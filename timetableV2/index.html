@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="timetable.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="load-ex">Load Example</button>
+        <label for="file-in">
+            CSV columns:
+            course_code,day,time,duration,classroom,class,department,course_name
+        </label>
+        <input type="file" accept=".csv;.txt" id="file-in" />
+
+        <div id="tt"></div>
+        <script type="module" src="timetable.js"></script>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
