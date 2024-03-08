@@ -39,7 +39,7 @@ export function mergeTableCells(data) {
     }
 }
 
-export function renderTable(tableData) {
+export function renderTable(tableData, department) {
     const days = [
         DayTemplate.replace("r$Day", "Monday"),
         DayTemplate.replace("r$Day", "Tuesday"),
@@ -66,8 +66,6 @@ export function renderTable(tableData) {
     }
     const body = days.join("\n");
     let table = TableTemplate.replace("r$Body", body);
-    console.log(table);
-    table = table.replace("r$Department", "CENG");
-    document.getElementById("tt").replaceChildren();
-    document.getElementById("tt").innerHTML = table;
+    table = table.replace("r$Department", department);
+    document.getElementById("tt").innerHTML += table;
 }

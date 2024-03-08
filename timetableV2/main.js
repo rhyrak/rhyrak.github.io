@@ -8,21 +8,26 @@ document.getElementById("file-in").addEventListener("input", (e) => {
     const reader = new FileReader();
     reader.readAsText(e.target.files[0]);
     reader.onloadend = () => {
-        const data = createEmptyTableData();
-
-        const courses = readCourses(reader.result);
-        for (let i = 0; i < courses.length; i++) {
-            const c = courses[i];
-            if (c.department != "CENG") continue;
-            data[c.day][c.time / 60][c.grade - 1] = {
+        const allCourses = readCourses(reader.result);
+        const departments = new Map();
+        for (let i = 0; i < allCourses.length; i++) {
+            const c = allCourses[i];
+            if (c.code == "course_code") continue;
+            if (!departments.has(c.department)) {
+                departments.set(c.department, { data: createEmptyTableData() });
+            }
+            const dep = departments.get(c.department);
+            dep.data[c.day][c.time / 60][c.grade - 1] = {
                 span: c.duration / 60,
                 name: c.code,
                 room: c.classroom,
             };
         }
 
-        mergeTableCells(data);
-        renderTable(data);
+        departments.forEach((dep, name) => {
+            mergeTableCells(dep.data);
+            renderTable(dep.data, name);
+        });
     };
 });
 
