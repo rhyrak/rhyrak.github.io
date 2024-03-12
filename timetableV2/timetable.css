@@ -3,7 +3,12 @@ table {
     table-layout: fixed;
     width: 98%;
     text-align: center;
-    margin: auto;
+    margin: 32px auto;
+}
+
+table > caption {
+    font-weight: bold;
+    font-size: larger;
 }
 
 tbody > tr {
