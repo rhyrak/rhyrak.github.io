@@ -1,0 +1,36 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #eeeef0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    height: 48px;
+    background-color: #55868c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.navlink {
+    all: unset;
+    margin: auto 8px;
+    color: white;
+}
+
+.navlink:hover {
+    cursor: pointer;
+}
