@@ -1,0 +1,12 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    margin:  8px 0 8px 0;
+    display: flex;
+}
+.row label {
+    width: 128px;
+}
