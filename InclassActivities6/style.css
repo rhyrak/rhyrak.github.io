@@ -1,0 +1,27 @@
+#btn {
+    padding: 16px 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: blue;
+    border-color: blue;
+    border-radius: 4px;
+    user-select: none;
+    z-index: 999;
+}
+
+#btn:hover {
+    background-color: rgb(136, 136, 250);
+    border-color: rgb(136, 136, 250);
+}
+
+h2 {
+    user-select: none;
+    position: absolute;
+    right: 50%;
+    top: 0;
+}
+
+#score {
+    user-select: none;
+}
