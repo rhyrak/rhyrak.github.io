@@ -26,7 +26,7 @@ function displayResults() {
 
     $("results").innerHTML =
         "<h2> Results </h2><br /> Average score is " +
-        average +
+        average.toFixed(2) +
         "<br > " +
         "High score = " +
         highestInTheRoom +
@@ -54,7 +54,7 @@ function displayScores() {
 function addScore() {
     $("name").focus();
     const name = $("name").value;
-    const score = parseInt($("score").value);
+    const score = parseFloat($("score").value);
     if (name == "" || isNaN(score) || score < 0 || score > 100) {
         alert("You must enter a name and a valid score");
         return;
