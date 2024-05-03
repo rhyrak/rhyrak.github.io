@@ -1,0 +1,22 @@
+body {
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+label {
+    font-size: large;
+}
+
+input {
+    height: 32px;
+    font-size: medium;
+}
+
+.row {
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: 480px;
+    justify-content: space-between;
+}
